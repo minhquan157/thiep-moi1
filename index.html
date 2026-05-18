@@ -1,26 +1,31 @@
-.happy_birthday {
-  position: absolute;
-  left: 50%; /* Thêm để căn giữa chuẩn khi dùng translate(-50%) */
-  transform: translate(-50%);
-  width: 100vw;
-  font-size: 6vw;
-  text-align: center;
-  font-family: 'Love';
-  color: rgb(212, 53, 119);
-  
-  /* Thêm dòng này để gọi hiệu ứng */
-  animation: heartbeat 1.5s infinite ease-in-out;
-}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chúc Mừng Sinh Nhật</title>
+    
+    <style>
+        .happy_birthday { 
+            position: absolute; 
+            left: 50%; 
+            transform: translate(-50%); 
+            width: 100vw; 
+            font-size: 6vw; 
+            text-align: center; 
+            font-family: 'Love'; 
+            color: rgb(212, 53, 119); 
+            animation: heartbeat 1.5s infinite ease-in-out; 
+        } 
+        @keyframes heartbeat { 
+            0% { transform: translate(-50%) scale(1); } 
+            50% { transform: translate(-50%) scale(1.08); } 
+            100% { transform: translate(-50%) scale(1); } 
+        }
+    </style>
+</head>
+<body>
 
-/* Định nghĩa chuyển động */
-@keyframes heartbeat {
-  0% {
-    transform: translate(-50%) scale(1);
-  }
-  50% {
-    transform: translate(-50%) scale(1.08); /* Phóng to lên một chút */
-  }
-  100% {
-    transform: translate(-50%) scale(1);
-  }
-}
+    <h1 class="happy_birthday">HAPPY BIRTHDAY</h1>
+
+</body>
+</html>
